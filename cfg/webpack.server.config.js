@@ -44,6 +44,11 @@ module.exports = {
           },
           "less-loader",
         ],
+        exclude: GLOBAL_CSS_REGEXP,
+      },
+      {
+        test: GLOBAL_CSS_REGEXP,
+        use: ["css-loader"],
       },
     ],
   },
