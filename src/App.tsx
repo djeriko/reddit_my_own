@@ -9,6 +9,7 @@ import { CardsList } from "./shared/CardsList";
 function AppComponent() {
   return (
     <Layout>
+      asd
       <Header />
       <Content>
         <CardsList />
