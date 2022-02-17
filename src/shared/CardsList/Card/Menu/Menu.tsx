@@ -1,7 +1,7 @@
 import React from "react";
-import { Dropdown } from "../../../Dropdown";
+import { Dropdown } from "../../../helpers/Dropdown";
 import { MenuIcon } from "../../../Icons";
-import { Text } from "../../../Text";
+import { Text } from "../../../helpers/Text";
 import styles from "./menu.css";
 import { MenuListItem } from "./MenuListItem";
 
@@ -18,7 +18,7 @@ export function Menu() {
         <div className={styles.dropdown}>
           <MenuListItem postId="123" />
           <button className={styles.closeButton}>
-            <Text mobileSize={12} size={14} color={"#33333"}>
+            <Text mobileSize={12} size={14}>
               Закрыть
             </Text>
           </button>

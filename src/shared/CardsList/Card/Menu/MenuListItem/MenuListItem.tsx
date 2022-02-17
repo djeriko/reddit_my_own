@@ -1,8 +1,7 @@
 import React from "react";
-import { BlockIcon } from "../../../../Icons";
-import { Text } from "../../../../Text";
-import WarningIcon from "../../../../Icons/WarningIcon";
+import { Text } from "../../../../helpers/Text";
 import styles from "./menulistitem.css";
+import { EIcon, Icon } from "../../../../helpers/Icon";
 
 interface IMenuItemsListProp {
   postId: string;
@@ -12,20 +11,18 @@ export function MenuListItem({ postId }: IMenuItemsListProp) {
   return (
     <ul className={styles.menuItemsList}>
       <li className={styles.menuItem} onClick={() => console.log(postId)}>
-        <BlockIcon />
-        <Text size={12} color={""}>
-          Скрыть
-        </Text>
+        <Icon name={EIcon.block} size={16} />
+        <Text size={12}>Скрыть</Text>
       </li>
 
       <div className={styles.divider} />
 
       <li className={styles.menuItem}>
-        <WarningIcon />
-        <Text size={12} color={""}>
-          Пожаловаться
-        </Text>
+        <Icon name={EIcon.warning} size={16} />
+        <Text size={12}>Пожаловаться!</Text>
       </li>
+
+      <div className={styles.divider} />
     </ul>
   );
 }
